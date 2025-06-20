@@ -71,6 +71,18 @@
    ```
 5. Создайте рядом с `docker-compose.yml` файл:
    - **wb_api_token** – единственная строка с вашим JWT.
+   - **credentials.json** – JSON-ключ сервисного аккаунта GCP.
+
+       **Как получить `credentials.json`:**
+       1. Зайдите в Google Cloud Console: https://console.cloud.google.com/
+       2. Выберите или создайте проект.
+       3. В меню слева перейдите в **IAM & Admin → Service Accounts**.
+       4. Нажмите **Создать сервисный аккаунт**, задайте имя, роль **Project → Editor** или **Sheets API Editor**.
+       5. После создания кликните на аккаунт и выберите **Keys → Add Key → Create New Key**.
+       6. Выберите формат **JSON** и скачайте файл – это ваш `credentials.json`.
+       7. Поместите этот файл рядом с `docker-compose.yml`.
+       8. - После этого отправьте email мне, чтобы я добавил вас в **editors** таблицы
+          - Или же создайте собственную таблицу, где также будет необходимо добавить адрес в editors 
 ---
 
 ## Запуск
